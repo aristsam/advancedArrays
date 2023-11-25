@@ -29,20 +29,20 @@ const array = [
 //Create an array using forEach that has all the usernames with a "!" to each of the usernames
 const arrayFor=[];
 const forArray=array.forEach(user=>arrayFor.push(user.username + "!"));
-console.log(arrayFor);
+console.log("arrayFor", arrayFor);
 
 //Create an array using map that has all the usernames with a "? to each of the usernames
 const arrayMap=array.map(user=>user.username + "?");
-console.log(arrayMap);
+console.log("arrayMap", arrayMap);
 
 //Filter the array to only include users who are on team: red
 const arrayFilter=array.filter(user=>user.team === "red");
-console.log(arrayFilter);
+console.log("red team", arrayFilter);
 
 //Find out the total score of all users using reduce
 const arrayReduce=array.reduce((acc,user)=>{return user.score+acc},0);
-console.log(arrayReduce);
+console.log("total score", arrayReduce);
 
 //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
 const newList = array.map(user=> { user.items = user.items.map(item => item + "!"); return user;});
-console.log(newList);
+console.log("bonus", newList);
